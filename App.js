@@ -27,12 +27,12 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}  onLayout={onLayoutRootView}>
+    <View style={styles.container} onLayout={onLayoutRootView}>
       <LoginScreen/>
-      <Text style={{
+      {/* <Text style={{
         fontSize:20,
         fontFamily:'Outfit-bold'
-      }}>App start!</Text>
+      }}>App start!</Text> */}
       <StatusBar style="auto" />
     </View>
   );
