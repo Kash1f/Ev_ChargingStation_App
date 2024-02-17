@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useCallback } from 'react';
+import LoginScreen from './App/Screen/LoginScreen/LoginScreen';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -26,8 +27,12 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text>Hello World!</Text>
+    <View style={styles.container}  onLayout={onLayoutRootView}>
+      <LoginScreen/>
+      <Text style={{
+        fontSize:20,
+        fontFamily:'Outfit-bold'
+      }}>App start!</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -37,7 +42,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop:25
   },
 });
