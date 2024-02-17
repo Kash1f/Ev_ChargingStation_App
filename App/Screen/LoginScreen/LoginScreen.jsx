@@ -15,12 +15,15 @@ export default function LoginScreen() {
       />
       <View style={{padding:20}}>
         <Text style={styles.heading}>Your Ultimate EV Charging Station Finder</Text>
-        <Text style={styles.desc}>Find EV charging station near you, plan your trip and stuff with one click
-
-
-
-        </Text>
-
+        <Text style={styles.desc}>Find EV charging station near you, plan your trip and stuff with one click </Text>
+        <View style={styles.button}>
+            <Text style={{
+              color:Colors.WHITE,
+              textAlign:'center',
+              fontFamily:'Outfit',
+              fontSize:17
+            }}>Login with Google</Text>
+        </View>
       </View>
     </View>
   );
@@ -31,7 +34,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 50,
+    marginTop: 80,
   },
   logoImage: {
     width: 200,
@@ -56,5 +59,12 @@ const styles = StyleSheet.create({
      marginTop:15,
      textAlign:'center',
      color:Colors.GRAY
+  },
+  button:{
+    backgroundColor: Colors.PRIMARY,
+    padding:16,
+    display:'flex',
+    borderRadius:99,
+    marginTop:40
   }
 });
