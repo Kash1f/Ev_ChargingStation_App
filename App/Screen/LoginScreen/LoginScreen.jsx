@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import Colors from "./Utils/Colors";
 
@@ -16,14 +16,15 @@ export default function LoginScreen() {
       <View style={{padding:20}}>
         <Text style={styles.heading}>Your Ultimate EV Charging Station Finder</Text>
         <Text style={styles.desc}>Find EV charging station near you, plan your trip and stuff with one click </Text>
-        <View style={styles.button}>
+        <TouchableOpacity style={styles.button}
+        onPress={()=>console.log("Button clicked")}>
             <Text style={{
               color:Colors.WHITE,
               textAlign:'center',
               fontFamily:'Outfit',
               fontSize:17
             }}>Login with Google</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
