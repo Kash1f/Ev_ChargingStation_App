@@ -12,7 +12,7 @@ export default function LoginScreen() {
   useWarmUpBrowser();
  
   const { startOAuthFlow } = useOAuth({ strategy: "oauth_google" });
-  const onPress = () => {
+  const onPress =async() => {
     try {
       const { createdSessionId, signIn, signUp, setActive } =
         await startOAuthFlow();
