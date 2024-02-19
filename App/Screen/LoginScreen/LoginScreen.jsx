@@ -2,8 +2,9 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import Colors from "./Utils/Colors";
 import * as WebBrowser from "expo-web-browser";
-import { useWarmUpBrowser } from "../../../hooks/hooks/useWarmUpBrowser";
+import { useWarmUpBrowser } from "../../../hooks/useWarmUpBrowser";
 import { useOAuth } from "@clerk/clerk-expo";
+
 
 WebBrowser.maybeCompleteAuthSession();
 

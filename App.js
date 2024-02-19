@@ -44,17 +44,18 @@ export default function App() {
   }
 
   return (
-    <ClerkProvider
-      publishableKey={"pk_test_YW1wbGUta2l0ZS00NC5jbGVyay5hY2NvdW50cy5kZXYk"}>
-
+    <ClerkProvider 
+     tokenCache={tokenCache}
+      publishableKey={"pk_test_YW1wbGUta2l0ZS00NC5jbGVyay5hY2NvdW50cy5kZXYk"}
+    >
       <View style={styles.container} onLayout={onLayoutRootView}>
         <SignedIn>
           <Text>You are Signed in</Text>
         </SignedIn>
         <SignedOut>
-        <LoginScreen />
+          <LoginScreen />
         </SignedOut>
-       
+
         <StatusBar style="auto" />
       </View>
     </ClerkProvider>
